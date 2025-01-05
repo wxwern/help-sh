@@ -7,7 +7,7 @@ A simple shell script that runs a given shell task stated in natural language, b
 ## Prerequisites
 
 - [bash](https://www.gnu.org/software/bash/)
-- [ollama](https://ollama.com)
+- [ollama](https://ollama.com) with any version of `deepseek-coder` (configurable)
 - [jq](https://jqlang.github.io/jq/)
 
 ## Usage
@@ -63,4 +63,9 @@ where `path/to/help.sh` is the path to the script. Then, you can run the script 
 $ help [instructions...]
 ```
 
+## Privacy
+
+`help.sh` provides basic knowledge of your system name and the current working directory to the LLM.
+
+As it uses local LLMs downloaded via `ollama`, it works without a network connection, and your requests never leave your device.
 
